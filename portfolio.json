@@ -1,13 +1,13 @@
 {
   "name": "Rogerio Palmares",
-  "label": "Optional Label",
+  "label": "Network Engineer",
   "image_path": "img/default-image.png",
   "contact": {
     "email": "",
     "phone": "",
     "location": "Dublin, Leinster, Ireland"
   },
-  "summary": "Network Engineer, with experience in managing and maintaining cloud and on-premises infrastructures. Skilled in automation, network security and network design.",
+  "summary": "Network Engineering, Automation, and Cloud",
   "base_url": "127.0.0.1:5500",
   "social_links": [
     {
@@ -94,7 +94,6 @@
       "summary": "",
       "url": "",
       "highlights": [
-        "",
         "",
         ""
       ],
