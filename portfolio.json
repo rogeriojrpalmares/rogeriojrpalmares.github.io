@@ -1,200 +1,207 @@
 {
-  "name": "Your Name",
+  "name": "Rogerio Palmares",
   "label": "Optional Label",
   "image_path": "img/default-image.png",
   "contact": {
-    "email": "FirstLast@Sample.com",
-    "phone": "123-456-7890",
-    "location": "City, State, Country"
+    "email": "",
+    "phone": "",
+    "location": "Dublin, Leinster, Ireland"
   },
-  "summary": "A short summary of who you are, your background, experience, and interests to give visitors a quick introduction to you.",
+  "summary": "Network Engineer, with experience in managing and maintaining cloud and on-premises infrastructures. Skilled in automation, network security and network design.",
   "base_url": "127.0.0.1:5500",
   "social_links": [
     {
       "label": "Personal Website",
-      "url": "https://sample.com",
+      "url": "https://pingautomaterepeat.blogspot.com/",
       "svg_path": "img/globe.svg"
     },
     {
       "label": "First Social",
-      "url": "https://sample.com",
+      "url": "https://www.linkedin.com/in/rogeriopalmares/",
       "svg_path": "img/linkedin.svg"
     },
     {
       "label": "Second Social",
-      "url": "https://sample.com",
+      "url": "https://github.com/rogeriojrpalmares",
       "svg_path": "img/github.svg"
     }
   ],
   "work_experience": [
     {
-      "company": "Latest Job",
-      "position": "Position One",
-      "url": "https://sample.com",
-      "start_date": "01/01/2020",
+      "company": "Dublin City University",
+      "position": "Sr Network Engineer",
+      "url": "https://dcu.ie",
+      "start_date": "2023",
       "end_date": "Present",
-      "summary": "Short summary about present job and what the position entails",
+      "summary": "",
       "highlights": [
-        "First Duty of Current Job",
-        "Second Duty of Current Job",
-        "Third Duty of Current Job"
+        "Led enterprise-wide migration from legacy VPN to Zero Trust Network Access (ZTNA) across multi-campus university infrastructure, deploying secure access solutions to protect critical assets and enable seamless remote connectivity for 1,000+ users.",
+        "Developed comprehensive network automation framework using REST APIs, Postman for API testing/validation, Python scripting with Jinja2 templating, and GitLab for version control, streamlining configuration management across multi-vendor environments.",
+        "Automated FortiGate firewall configuration generation and deployment workflows, reducing manual setup time by 70%+ and minimizing configuration errors through templated Python scripts and API orchestration.",
+        "Created \"Network Hub\" centralized dashboard providing single-pane visibility into automation scripts execution, SSL certificate expiration monitoring/alerting, and real-time observability metrics for proactive infrastructure management.",
+        "Managed multi-vendor enterprise network infrastructure including Juniper QFX/EX switches, SRX edge firewalls, A10 WAF/load balancers, and DNS systems (EfficientIP, Route53) for high-availability campus operations.",
+        "Led deployment of Network Access Control (NAC) solution across enterprise wired network, integrating Juniper EX switches, Aruba ClearPass, and Azure Intune for comprehensive compliance verification."
       ]
     },
     {
-      "company": "Previous Job",
-      "position": "Position Two",
-      "url": "https://sample.com",
-      "start_date": "01/01/2010",
-      "end_date": "01/01/2020",
-      "summary": "Short summary about previous job and what that position entailed",
+      "company": "Workhuman",
+      "position": "Cloud Network Engineer",
+      "url": "https://workhuman.com",
+      "start_date": "2022",
+      "end_date": "2023",
+      "summary": "",
       "highlights": [
-        "First Duty of Previous Job",
-        "Second Duty of Previous Job",
-        "Third Duty of Previous Job"
+        "Achieved substantial cost savings across multiple AWS accounts (DEV/Preprod/Prod) by deploying AWS Cost Optimization dashboards, executing efficient migrations of hundreds of EBS volumes and EC2 instances, and rightsizing 20+ S3 Storage Classes.",
+        "Served as primary technical escalation resource for Software Development teams, proactively diagnosing and resolving complex networking issues across AWS, OCI, and Megaport to ensure uninterrupted availability of critical web applications and databases.",
+        "Implemented infrastructure-as-code (IaC) solutions using Terraform and CloudFormation for automated provisioning of VPCs, Transit Gateways, subnets, security groups, NACLs, Network Load Balancers, AWS Network Firewall, WAF rulesets across dev/test/prod environments.",
+        "Implemented scalable serverless security solution replacing VPN dependencies, leveraging Lambda@Edge for real-time authentication decisions, reducing latency and eliminating client VPN software requirements for end users."
+      ]
+    },
+    {
+      "company": "Amazon Web Services (AWS)",
+      "position": "Cloud Support Engineer / Technical Account Manager",
+      "url": "https://aws.amazon.com/",
+      "start_date": "2020",
+      "end_date": "2022",
+      "summary": "",
+      "highlights": [
+        "Recognized as the go-to Direct Connect Subject Matter Expert (SME) in AWS Premium Support, handling complex escalations, providing authoritative technical guidance, and driving product improvements through operational insights and customer feedback.",
+        "Authored 12 internal technical articles and conducted 8 trainings on AWS Services and networking technologies, resulting in over 200 views across the organization.",
+        "Leveraged expertise in AWS Networking Services, including AWS VPN, Client VPN, Direct Connect, VPC,Network Firewall, Global Accelerator, Elastic Load Balancers, Route53 (DNS), and others, to support and assist customers in building and maintaining robust network infrastructures.",
+        "Developed Python Boto3 scripts and CloudFormation templates for automated test environment provisioning, enabling rapid Proof of Concept deployments for customers and accelerating cloud adoption timelines.",
+        "Provided valuable architectural advice, support strategies, and launch planning guidance to Fortune 100 customers, ensuring successful cloud implementations and seamless operational continuity.",
+        "Conducted comprehensive reviews of service disruptions, metrics, and detailed pre-launch planning, providing architectural guidance and actionable recommendations to enhance system reliability, performance, and customer operational success."
+      ]
+    },
+    {
+      "company": "Logicalis",
+      "position": "Network Engineer",
+      "url": "https://www.la.logicalis.com",
+      "start_date": "2022",
+      "end_date": "2023",
+      "summary": "",
+      "highlights": [
+        "Implemented multiple projects encompassing the design, migration, and deployment of Cisco switches (Catalyst/Nexus), Routers (ASR/ISR), Servers (Cisco UCS and Dell PowerEdge), Virtualization (VMware/KVM), Linux (Red Hat), and F5 Load Balancers.",
+        "Authored comprehensive implementation plans, High-Level Design (HLD), and Low-Level Design (LLD) documents, ensuring seamless project execution and adherence to industry best practices",
+        "Deployed a Python-based automation solution to streamline the creation of start-up scripts for F5 load balancers, resulting in a significant reduction in time and effort for over 30 Data Center Engineers across the organization",
+        "Worked directly with 10+ enterprise customers, leveraging strong interpersonal skills to gather and analyze network traffic patterns, constraints, and expected results, leading to the successful delivery of projects"
       ]
     }
   ],
   "projects": [
     {
-      "title": "My First Project",
-      "summary": "Short summary about my first project",
-      "url": "https://sample.com",
+      "title": "",
+      "summary": "",
+      "url": "",
       "highlights": [
-        "First Highlight of Project One",
-        "Second Highlight of Project One",
-        "Third Highlight of Project One"
+        "",
+        "",
+        ""
       ],
       "images": [
         {
-          "img_path": "https://picsum.photos/600/338?random=1",
-          "caption": "Image Caption 1"
+          "img_path": "",
+          "caption": ""
         },
         {
-          "img_path": "https://picsum.photos/600/338?random=2",
-          "caption": "Image Caption 2"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=3",
-          "caption": "Image Caption 3"
+          "img_path": "",
+          "caption": ""
         }
       ]
     },
     {
-      "title": "My Second Project",
-      "summary": "Short summary about my second project",
-      "url": "https://sample.com",
+      "title": "",
+      "summary": "",
+      "url": "",
       "highlights": [
-        "First Highlight of Project Two",
-        "Second Highlight of Project Two",
-        "Third Highlight of Project Two"
+        "",
+        "",
+        ""
       ],
       "images": [
         {
-          "img_path": "https://picsum.photos/600/338?random=4",
-          "caption": "Image Caption 4"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=5",
-          "caption": "Image Caption 5"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=6",
-          "caption": "Image Caption 6"
+          "img_path": "",
+          "caption": ""
         }
       ]
     }
   ],
   "volunteer_experience": [
     {
-      "organization": "Latest Organization",
-      "position": "Position One",
-      "url": "https://sample.com",
-      "start_date": "01/01/2020",
-      "end_date": "Present",
-      "summary": "Short summary about present volunteer work",
+      "organization": "National Society of Black Engineers (NSBE)",
+      "position": "Member",
+      "url": "https://nsbe.org/",
+      "start_date": "2014",
+      "end_date": "2015",
+      "summary": "",
       "highlights": [
-        "First Duty of Current Organization",
-        "Second Duty of Current Organization",
-        "Third Duty of Current Organization"
+        "",
+        "",
+        ""
       ]
     },
     {
-      "organization": "Previous Organization",
-      "position": "Position Two",
-      "url": "https://sample.com",
-      "start_date": "01/01/2010",
-      "end_date": "01/01/2020",
-      "summary": "Short summary about previous volunteer work",
+      "organization": "New York Cares",
+      "position": "Member",
+      "url": "https://www.newyorkcares.org/",
+      "start_date": "2015",
+      "end_date": "2015",
+      "summary": "Economy Professor Assistant for kids",
       "highlights": [
-        "First Duty of Previous Organization",
-        "Second Duty of Previous Organization",
-        "Third Duty of Previous Organization"
+        "",
+        "",
+        ""
       ]
     }
   ],
   "education": [
     {
-      "institution": "Institution One",
-      "location": "Institution One Location",
-      "url": "https://sample.com",
+      "institution": "National College of Ireland",
+      "location": "Dublin",
+      "url": "https://www.ncirl.ie/",
       "degrees": [
-        "Master of Science in Computer Science",
-        "Minor in Mathematics"
+        "Postgrad in CyberSecurity"
       ],
-      "honors": ["Outstanding Student Award", "Dean's List"],
-      "gpa_cumulative": "3.5",
-      "gpa_major": "4.0",
-      "graduation_date": "01/01/2005"
+      "honors": ["Dinstinct"],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": "2024"
     },
     {
-      "institution": "Institution Two",
-      "location": "Institution Two Location",
-      "url": "https://sample.com",
-      "degrees": ["Bachelor of Science in Physics"],
-      "honors": ["Scholarship Recipient"],
-      "gpa_cumulative": "3.2",
-      "gpa_major": "3.9",
-      "graduation_date": "01/01/2000"
+      "institution": "New York Intistute of Technology",
+      "location": "New York",
+      "url": "https://www.nyit.edu/",
+      "degrees": ["Bachelor of Telecommunications Management"],
+      "honors": [""],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": "2015"
+    },
+    {
+      "institution": "Universidade Federal Fluminense (UFF)",
+      "location": "Rio de Janeiro",
+      "url": "https://www.uff.br/",
+      "degrees": ["Bachelor of Telecommunications Engineering"],
+      "honors": [""],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": "2017"
     }
   ],
   "skills": [
     {
-      "name": "My First Skill",
-      "proficiency": 100,
-      "proficiency_label": "Proficiency Level"
     },
     {
-      "name": "My Second Skill",
-      "proficiency": 80,
-      "proficiency_label": "Proficiency Level"
     }
   ],
   "interests": [
     {
-      "name": "My First Hobby",
-      "summary": "Short summary about my first Hobby",
+      "name": "Musician",
+      "summary": "",
       "images": [
         {
-          "img_path": "https://picsum.photos/600/338?random=7",
-          "caption": "Image Caption 7"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=8",
-          "caption": "Image Caption 8"
-        }
-      ]
-    },
-    {
-      "name": "My Second Hobby",
-      "summary": "Short summary about my second hobby",
-      "images": [
-        {
-          "img_path": "https://picsum.photos/600/338?random=9",
-          "caption": "Image Caption 9"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=10",
-          "caption": "Image Caption 10"
+          "img_path": "img/samba1.jpg",
+          "caption": "Playing Samba at a local event"
         }
       ]
     }
@@ -202,23 +209,22 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "Native speaker"
+      "fluency": "Fluent"
     },
     {
-      "language": "American Sign Language",
-      "fluency": "Professional Working Proficiency"
+      "language": "Portuguese (Brazilian)",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Intermediate"
     }
   ],
   "references": [
     {
-      "name": "Person One",
-      "relation": "Previous Boss",
-      "reference": "Some nice things that Person One said about you, your work ethic, and how you provided value to their team."
-    },
-    {
-      "name": "Person Two",
-      "relation": "Previous Coworker",
-      "reference": "More kind things that Person Two said about you, what it was like working with you, and things you've accomplished."
+      "name": "",
+      "relation": "",
+      "reference": ""
     }
   ]
 }
