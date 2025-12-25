@@ -1203,31 +1203,43 @@ html, body {
 }
 
 .cert-item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    /* Row 1: Always 120px tall (Reserved for Image)
+       Row 2: Auto (For the text)
+    */
+    grid-template-rows: 120px auto; 
+    
+    /* Gap between image and text */
+    row-gap: 10px; 
+    
+    /* Center everything */
+    justify-items: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
-    border-radius: 12px;
-    width: 100%;
-    background: rgba(255,255,255,0.02);
-    transition: background 0.3s;
 }
 
 .cert-item:hover {
     background: rgba(255,255,255,0.08);
 }
 
+/* 2. The Standard Images (80px) */
 .cert-item img {
-    width: 80px;
-    height: 80px;
+    width: auto;      /* Let width adjust automatically */
+    height: 80px;     /* Default standard size */
     object-fit: contain;
-    margin-bottom: 12px;
-    /* Optional: Grayscale until hover */
-    filter: grayscale(30%); 
+    
+    /* Remove old margins because the Grid handles the gap now */
+    margin-bottom: 0; 
+    filter: grayscale(30%);
     transition: filter 0.2s;
 }
 
+/* 3. The "Big" Image Class (110px) */
+/* This one is allowed to be taller, but it still fits inside the 120px 'shelf' */
+.cert-item img.large-cert {
+    height: 80px; 
+    width: auto;
+}
 .cert-item:hover img {
     filter: grayscale(0%);
 }
