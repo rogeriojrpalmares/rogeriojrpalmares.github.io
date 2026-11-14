@@ -191,6 +191,25 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--slate);
 }
 
+/* Talk photo: spans both columns of its section */
+
+.stage {
+  grid-column: 1 / -1;
+  margin: 0 0 clamp(1.5rem, 4vh, 2.5rem);
+}
+.stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+.stage figcaption {
+  margin-top: 0.6rem;
+  color: var(--slate);
+  font-size: 0.9rem;
+}
+
 /* Certifications: vendor in one column, its certifications beside it */
 
 .certs {
@@ -250,6 +269,8 @@ a:hover { text-decoration-thickness: 2px; }
   .faceplate a { padding: 0.8rem 0.9rem; gap: 0.6rem; }
 
   .section { grid-template-columns: 1fr; row-gap: 1rem; }
+  .stage { margin-bottom: 0.5rem; }
+  .stage img { aspect-ratio: 16 / 9; object-fit: cover; object-position: 52% 50%; }
   .section h2 { color: var(--slate); }
   .certs { grid-template-columns: 1fr; row-gap: 0.3rem; }
   .certs dd + dt { margin-top: 1.1rem; }
@@ -261,6 +282,6 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 @media print {
-  .faceplate, .skip { display: none; }
+  .faceplate, .skip, .stage { display: none; }
   :root { --paper: #fff; --ink: #000; --slate: #333; --rule: #bbb; --link: #000; }
 }
