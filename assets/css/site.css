@@ -305,6 +305,13 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--slate);
 }
 
+.rows p.about {
+  max-width: 36rem;
+  margin-top: 0.6rem;
+  color: var(--ink);
+  opacity: 0.86;
+}
+
 /* Talks: the whole row is the link */
 
 .rows.linked > li {
