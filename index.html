@@ -38,14 +38,8 @@
 <body>
   <a class="skip" href="#talks">Skip to content</a>
 
-  <!-- One RJ45 port, reused by each navigation link -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="port" viewBox="0 0 34 28">
-      <path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/>
-      <path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/>
-      <rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/>
-    </symbol>
-  </svg>
+  <div class="backdrop" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
 
   <div class="page">
     <header class="hero">
@@ -55,16 +49,16 @@
         I work on who gets onto a campus network and what they can reach once they are on it:
         network access control and zero trust network access.
       </p>
-
-      <nav class="faceplate" aria-label="Sections">
-        <ul>
-          <li><a href="#talks"><svg class="port" aria-hidden="true"><use href="#port"/></svg><span class="port-label">Talks</span></a></li>
-          <li><a href="#certifications"><svg class="port" aria-hidden="true"><use href="#port"/></svg><span class="port-label">Certifications</span></a></li>
-          <li><a href="#education"><svg class="port" aria-hidden="true"><use href="#port"/></svg><span class="port-label">Education</span></a></li>
-          <li><a href="#contact"><svg class="port" aria-hidden="true"><use href="#port"/></svg><span class="port-label">Contact</span></a></li>
-        </ul>
-      </nav>
     </header>
+
+    <nav class="faceplate" aria-label="Sections">
+      <ul>
+        <li><a href="#talks"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Talks</span></a></li>
+        <li><a href="#certifications"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Certifications</span></a></li>
+        <li><a href="#education"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Education</span></a></li>
+        <li><a href="#contact"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Contact</span></a></li>
+      </ul>
+    </nav>
 
     <main>
       <section class="section" id="talks" aria-labelledby="talks-title">
@@ -74,13 +68,15 @@
           <figcaption>On stage at HEAnet Conference 2024</figcaption>
         </figure>
         <h2 id="talks-title">Conference talks</h2>
-        <ul class="rows">
+        <ul class="rows linked">
           <li>
             <h3><a href="https://www.conference.heanet.ie/validated-trust">How to Implement and Sustain Zero Trust Network Access (ZTNA)</a></h3>
+            <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             <p>HEAnet Conference, 2025</p>
           </li>
           <li>
             <h3><a href="https://www.heanet.ie/talk/enhancing-campus-security-implementing-network-access-control-at-dublin-city-university?conference=2024">Enhancing Campus Security: Network Access Control (NAC) at Dublin City University</a></h3>
+            <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             <p>HEAnet Conference, 2024</p>
           </li>
         </ul>
@@ -143,7 +139,8 @@
       <section class="section" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
         <ul class="contact-links">
-          <li><a href="mailto:rogeriojrpalmares@outlook.com">rogeriojrpalmares@outlook.com</a></li>
+          <li><a href="mailto:rogeriojrpalmares@outlook.com">rogeriojrpalmares@outlook.com</a>
+            <button class="copy" type="button" data-copy="rogeriojrpalmares@outlook.com">Copy address</button></li>
           <li><a href="https://www.linkedin.com/in/rogeriopalmares/">linkedin.com/in/rogeriopalmares</a></li>
         </ul>
       </section>
@@ -154,31 +151,6 @@
     </footer>
   </div>
 
-  <script>
-    // Keep the footer year current.
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Light the port LED for the section currently on screen.
-    (function () {
-      if (!('IntersectionObserver' in window)) return;
-      var links = {};
-      document.querySelectorAll('.faceplate a').forEach(function (a) {
-        links[a.getAttribute('href').slice(1)] = a;
-      });
-      var visible = new Set();
-      var order = Object.keys(links);
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) visible.add(e.target.id); else visible.delete(e.target.id);
-        });
-        var current = order.find(function (id) { return visible.has(id); });
-        order.forEach(function (id) {
-          if (id === current) links[id].setAttribute('aria-current', 'true');
-          else links[id].removeAttribute('aria-current');
-        });
-      }, { rootMargin: '-35% 0px -55% 0px' });
-      order.forEach(function (id) { observer.observe(document.getElementById(id)); });
-    })();
-  </script>
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>
