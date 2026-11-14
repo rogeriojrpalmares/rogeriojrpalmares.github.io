@@ -159,7 +159,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 .hero .intro {
-  max-width: 34rem;
+  max-width: 40rem;
   margin: clamp(1.5rem, 4vh, 2.5rem) 0 0;
   font-size: clamp(1.15rem, 2vw, 1.375rem);
   line-height: 1.45;
@@ -303,6 +303,13 @@ a:hover { text-decoration-thickness: 2px; }
 .rows p {
   margin: 0.3rem 0 0;
   color: var(--slate);
+}
+
+.rows p.about {
+  max-width: 36rem;
+  margin-top: 0.6rem;
+  color: var(--ink);
+  opacity: 0.86;
 }
 
 /* Talks: the whole row is the link */
