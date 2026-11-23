@@ -15,12 +15,13 @@
   --panel: #10262c;     /* faceplate */
   --ink: #e9f1f1;
   --slate: #93a8ad;
-  --rule: #213b42;
+  --rule: #2c4c54;      /* hairlines, ~2:1 on paper */
   --link: #62d2de;      /* OM3 fibre jacket aqua */
   --led-off: #36525a;
   --led-on: #3ddc84;
   --led-test: #f5b942;
   --radius: 8px;
+  --nav-h: 3.6rem;      /* faceplate height, for sticky offsets */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -125,12 +126,12 @@ a:hover { text-decoration-thickness: 2px; }
 /* ---------- Hero ---------- */
 
 .hero {
-  padding: clamp(3rem, 10vh, 7rem) 0 clamp(2rem, 5vh, 3.25rem);
+  padding: clamp(2.5rem, 8vh, 5.5rem) 0 clamp(2rem, 5vh, 3rem);
 }
 
 .hero h1 {
   margin: 0 0 0 -0.045em;
-  font-size: clamp(2.9rem, 10.5vw, 7.5rem);
+  font-size: clamp(2.9rem, min(10.5vw, 14vh), 6.75rem);
   font-weight: 800;
   font-stretch: 125%;
   line-height: 0.92;
@@ -203,8 +204,18 @@ a:hover { text-decoration-thickness: 2px; }
   transition: box-shadow 200ms ease, border-color 200ms ease;
 }
 .faceplate.stuck {
-  border-color: #2c4c54;
+  border-color: #3a5f69;
   box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.7);
+}
+/* Mask the strip above the stuck faceplate so text doesn't scroll through it */
+.faceplate.stuck::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  bottom: 100%;
+  height: 1rem;
+  background: var(--paper);
 }
 .faceplate ul {
   list-style: none;
@@ -289,11 +300,15 @@ a:hover { text-decoration-thickness: 2px; }
   display: grid;
   grid-template-columns: 13rem 1fr;
   column-gap: 2rem;
-  padding: clamp(2rem, 5vh, 3rem) 0;
+  padding: clamp(2.5rem, 7vh, 4.5rem) 0;
   border-top: 1px solid var(--rule);
 }
+main { counter-reset: port; }
 
 .section h2 {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.75rem);
+  align-self: start;
   margin: 0;
   font-size: 1.0625rem;
   font-weight: 600;
@@ -490,7 +505,7 @@ a:hover { text-decoration-thickness: 2px; }
   border-radius: var(--radius);
   transition: border-color 150ms ease;
 }
-.cards > li:hover { border-color: #2c4c54; }
+.cards > li:hover { border-color: #3a5f69; }
 .cards h3 { font-size: clamp(1.1rem, 1.8vw, 1.25rem); }
 .cards p.about { margin-top: 0.55rem; font-size: 0.975rem; }
 .cards p.stack { margin-top: auto; padding-top: 0.9rem; }
@@ -538,33 +553,53 @@ a:hover { text-decoration-thickness: 2px; }
   font-size: 0.9rem;
 }
 
+/* Port number, like the label printed above a switch port */
+.section h2::before {
+  counter-increment: port;
+  content: counter(port, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--slate);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
 /* ---------- Medium screens ---------- */
 
 @media (max-width: 64rem) {
-  .faceplate ul { grid-template-columns: repeat(3, 1fr); }
-  .faceplate li + li { border-left: 0; }
-  .faceplate li:not(:nth-child(3n + 1)) { border-left: 1px solid var(--rule); }
-  .faceplate li:nth-child(n + 4) { border-top: 1px solid var(--rule); }
+  .faceplate ul {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+            mask-image: linear-gradient(to right, #000 85%, transparent);
+  }
+  .faceplate ul::-webkit-scrollbar { display: none; }
+  .faceplate ul.end {
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  .faceplate li { flex: none; scroll-snap-align: start; }
   .faceplate li a { border-radius: 0; }
 }
 
 /* ---------- Small screens ---------- */
 
 @media (max-width: 46rem) {
-  html { scroll-padding-top: 1.5rem; }
+  html { scroll-padding-top: 5rem; }
+  :root { --nav-h: 3rem; }
   .backdrop { --mx: 88%; --my: 2.5rem; }
   .backdrop::after {
     -webkit-mask-image: radial-gradient(10rem circle at var(--mx) var(--my), #000, transparent 72%);
             mask-image: radial-gradient(10rem circle at var(--mx) var(--my), #000, transparent 72%);
   }
-  .faceplate { position: static; }
-  .faceplate li a { border-radius: 0; }
-  .faceplate ul { grid-template-columns: repeat(2, 1fr); }
-  .faceplate li + li,
-  .faceplate li:not(:nth-child(3n + 1)) { border-left: 0; }
-  .faceplate li:nth-child(even) { border-left: 1px solid var(--rule); }
-  .faceplate li:nth-child(n + 3) { border-top: 1px solid var(--rule); }
-  .faceplate a { padding: 0.8rem 0.9rem; gap: 0.6rem; }
+  .faceplate { top: 0.5rem; }
+  .faceplate a { padding: 0.6rem 0.85rem; gap: 0.5rem; font-size: 0.9rem; }
+  .port { width: 26px; height: 22px; }
 
   .section { grid-template-columns: 1fr; row-gap: 1rem; }
   .rows.linked > li { margin: 0 -0.75rem; padding: 0.85rem 2.75rem 0.85rem 0.75rem; }
@@ -572,7 +607,7 @@ a:hover { text-decoration-thickness: 2px; }
   .go { right: 0.6rem; width: 1.25rem; height: 1.25rem; }
   .stage { margin-bottom: 0.5rem; }
   .stage img { aspect-ratio: 16 / 9; object-fit: cover; object-position: 52% 50%; }
-  .section h2 { color: var(--slate); }
+  .section h2 { position: static; color: var(--slate); }
   .certs { grid-template-columns: 1fr; row-gap: 0.3rem; }
   .certs dd + dt { margin-top: 1.1rem; }
   .timeline { margin-left: 0; padding-left: 1.4rem; }

@@ -16,6 +16,14 @@
       links[a.getAttribute('href').slice(1)] = a;
     });
     var order = Object.keys(links);
+    var strip = nav.querySelector('ul');
+    // Drop the edge fade once the last port is in view.
+    var edge = function () {
+      strip.classList.toggle('end', strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2);
+    };
+    strip.addEventListener('scroll', edge, { passive: true });
+    window.addEventListener('resize', edge);
+    edge();
     var visible = new Set();
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -26,6 +34,12 @@
         if (id === current) links[id].setAttribute('aria-current', 'true');
         else links[id].removeAttribute('aria-current');
       });
+      // On narrower screens the ports scroll sideways: keep the lit one in view.
+      if (current && strip.scrollWidth > strip.clientWidth) {
+        var a = links[current];
+        var left = a.offsetLeft - (strip.clientWidth - a.offsetWidth) / 2;
+        strip.scrollTo({ left: Math.max(0, left), behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
     }, { rootMargin: '-35% 0px -55% 0px' });
     order.forEach(function (id) {
       var section = document.getElementById(id);
