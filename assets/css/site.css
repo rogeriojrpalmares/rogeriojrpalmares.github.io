@@ -173,7 +173,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 .hero .now {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
   margin: 1.1rem 0 0;
   color: var(--slate);
@@ -183,6 +183,7 @@ a:hover { text-decoration-thickness: 2px; }
   flex: none;
   width: 0.5rem;
   height: 0.5rem;
+  margin-top: 0.5em;
   border-radius: 2px;
   background: var(--led-on);
   box-shadow: 0 0 6px rgba(61, 220, 132, 0.8);
@@ -222,7 +223,7 @@ a:hover { text-decoration-thickness: 2px; }
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 .faceplate li + li { border-left: 1px solid var(--rule); }
 
@@ -285,7 +286,6 @@ a:hover { text-decoration-thickness: 2px; }
 .faceplate.boot li:nth-child(3) .led { animation-delay: 0.65s; }
 .faceplate.boot li:nth-child(4) .led { animation-delay: 0.80s; }
 .faceplate.boot li:nth-child(5) .led { animation-delay: 0.95s; }
-.faceplate.boot li:nth-child(6) .led { animation-delay: 1.10s; }
 @keyframes boot {
   0%   { fill: var(--led-off); }
   10%  { fill: var(--led-test); }
@@ -445,12 +445,23 @@ main { counter-reset: port; }
 .rows .when { color: var(--slate); }
 
 .rows p.stack {
+  max-width: 36rem;
   margin-top: 0.7rem;
   font-size: 0.875rem;
   letter-spacing: 0.01em;
   color: var(--link);
   opacity: 0.85;
 }
+
+.rows ul.points {
+  max-width: 36rem;
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--ink);
+  opacity: 0.86;
+}
+.rows ul.points li::marker { color: var(--link); }
+.rows ul.points li + li { margin-top: 0.4rem; }
 
 /* Experience: a run of fibre with a node per role */
 
@@ -487,28 +498,6 @@ main { counter-reset: port; }
   border-color: var(--led-on);
   box-shadow: 0 0 8px rgba(61, 220, 132, 0.7);
 }
-
-/* Projects: modules in a chassis */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
-  gap: 1rem;
-}
-.rows.cards > li + li { margin-top: 0; }
-.cards > li {
-  display: flex;
-  flex-direction: column;
-  padding: 1.2rem 1.25rem 1.1rem;
-  background: var(--panel);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  transition: border-color 150ms ease;
-}
-.cards > li:hover { border-color: #3a5f69; }
-.cards h3 { font-size: clamp(1.1rem, 1.8vw, 1.25rem); }
-.cards p.about { margin-top: 0.55rem; font-size: 0.975rem; }
-.cards p.stack { margin-top: auto; padding-top: 0.9rem; }
 
 /* ---------- Contact ---------- */
 
@@ -613,7 +602,6 @@ main { counter-reset: port; }
   .timeline { margin-left: 0; padding-left: 1.4rem; }
   .timeline > li::before { left: -1.4rem; }
   .timeline::before { left: 0.25rem; }
-  .cards { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -627,7 +615,6 @@ main { counter-reset: port; }
 
 @media print {
   .faceplate, .skip, .stage, .backdrop, .progress, .copy, .go, .status { display: none; }
-  .cards > li { background: none; break-inside: avoid; }
   .hero h1 { background: none; -webkit-text-fill-color: currentColor; }
   :root { --paper: #fff; --ink: #000; --slate: #333; --rule: #bbb; --link: #000; }
 }
