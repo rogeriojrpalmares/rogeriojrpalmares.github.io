@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rogerio Palmares, Network and Security Engineer</title>
-  <meta name="description" content="Rogerio Palmares builds campus, enterprise and cloud networks across AWS, Azure and OCI, and the automation that runs them. Senior Network Engineer at Dublin City University, previously at AWS. Experience, conference talks and certifications.">
+  <meta name="description" content="Rogerio Palmares builds campus, enterprise and cloud networks across AWS, Azure and OCI, and the automation that runs them. Senior Network Engineer at Dublin City University, previously an AWS Direct Connect subject matter expert. Experience, selected work, conference talks and certifications.">
   <link rel="canonical" href="https://rogeriopalmares.com/">
 
   <meta property="og:type" content="profile">
@@ -29,10 +29,10 @@
     "@type": "Person",
     "name": "Rogerio Palmares",
     "jobTitle": "Senior Network Engineer",
-    "knowsAbout": ["Network engineering", "Network security", "Network automation", "AWS networking", "Azure networking", "Zero trust network access"],
+    "knowsAbout": ["Network engineering", "Network security", "Network automation", "AWS networking", "AWS Direct Connect", "BGP", "Azure networking", "Zero trust network access", "Network access control"],
     "worksFor": { "@type": "CollegeOrUniversity", "name": "Dublin City University" },
     "url": "https://rogeriopalmares.com/",
-    "sameAs": ["https://www.linkedin.com/in/rogeriopalmares/"],
+    "sameAs": ["https://www.linkedin.com/in/rogeriopalmares/", "https://github.com/rogeriojrpalmares"],
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "National College of Ireland" },
       { "@type": "CollegeOrUniversity", "name": "Universidade Federal Fluminense" },
@@ -57,13 +57,14 @@
       </p>
       <p class="now">
         <span class="status" aria-hidden="true"></span>
-        Currently Senior Network Engineer at Dublin City University. Previously at NTT, Workhuman and AWS.
+        Currently Senior Network Engineer at Dublin City University. Previously at Workhuman and at AWS, where I was a Direct Connect subject matter expert.
       </p>
     </header>
 
     <nav class="faceplate" aria-label="Sections">
       <ul>
         <li><a href="#experience"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Experience</span></a></li>
+        <li><a href="#work"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Work</span></a></li>
         <li><a href="#talks"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Talks</span></a></li>
         <li><a href="#certifications"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Certifications</span></a></li>
         <li><a href="#education"><svg class="port" viewBox="0 0 34 28" aria-hidden="true"><path class="jack" d="M1.75 1.75h30.5v18.5h-8v6h-14.5v-6h-8z"/><path class="pins" d="M9.5 2v6M13.25 2v6M17 2v6M20.75 2v6M24.5 2v6"/><rect class="led" x="26" y="13.5" width="4" height="4" rx="1"/></svg><span class="port-label">Education</span></a></li>
@@ -77,46 +78,89 @@
         <ol class="rows timeline">
           <li>
             <h3>Dublin City University</h3>
-            <p class="meta"><span class="org">Senior Network Engineer</span> <span class="when">Dec 2023 to present</span></p>
+            <p class="meta"><span class="org">Senior Network Engineer</span> <span class="when">Jun 2023 to present</span></p>
             <p class="about">Designing, securing and operating DCU's multi-campus enterprise network, serving thousands of users, across routing, switching, firewalls and security services. The focus is network architecture, infrastructure resilience and operational automation with Python, Ansible and APIs.</p>
-            <p class="stack">Juniper EX, QFX and SRX · Aruba CX · Mist AI · FortiGate, FortiEMS and FortiAnalyzer · HPE SSE · A10 WAF · ClearPass · DNS · VMware · Azure</p>
-          </li>
-          <li>
-            <h3>NTT</h3>
-            <p class="meta"><span class="org">Hybrid cloud networking, Azure and AWS</span></p>
-            <p class="about">Designed, implemented, automated and supported hybrid cloud network infrastructure across Azure and AWS, as part of the Cloud Network Change Team.</p>
             <ul class="points">
-              <li>Owned the technical delivery of network and security changes: planning, documentation, change presentations, implementation and post-change validation.</li>
-              <li>Implemented changes as code, in Python with the Azure and AWS SDKs, rather than by manual configuration.</li>
-              <li>Automated firewall policy, routing controls and access restrictions; built secure B2B connectivity with partners; set up networking for new application deployments.</li>
+              <li>Led the move from client VPN to zero trust network access on Fortinet for more than 1,000 users, then migrated the service to HPE SSE with identity and device posture checks.</li>
+              <li>Designed and rolled out wired network access control on Aruba ClearPass across HPE and Juniper switches: 802.1X, MAC authentication with device profiling, and policy-based VLAN assignment.</li>
+              <li>Built self-service security automation in Python and Rundeck: DNS RPZ blocking through the EfficientIP API, and BGP blackholing for malicious IPs. Blocking a domain went from days to under an hour.</li>
+              <li>Built certificate renewal pipelines that push Let's Encrypt certificates to load balancers, firewalls and network management platforms through their APIs.</li>
+              <li>Audited Juniper SRX policies with a Python tool that cross-checks every address through the Security Director API.</li>
             </ul>
-            <p class="stack">Azure VNet, NSGs, Firewall, VPN Gateway and ExpressRoute · AWS VPC, Transit Gateway, site-to-site and client VPN · Route 53</p>
+            <p class="stack">Juniper EX, QFX and SRX · Aruba CX · Mist AI · FortiGate, FortiClient EMS and FortiAnalyzer · HPE SSE · ClearPass · Palo Alto · A10 WAF · EfficientIP DDI · VMware · Azure</p>
           </li>
           <li>
             <h3>Workhuman</h3>
-            <p class="meta"><span class="org">Cloud infrastructure, AWS and OCI</span></p>
+            <p class="meta"><span class="org">Cloud Network Engineer</span> <span class="when">Feb 2022 to May 2023</span></p>
             <p class="about">Operated, managed and optimised large-scale public cloud deployments across AWS and OCI, supporting millions of end users and the internal processes of hundreds of staff.</p>
             <ul class="points">
               <li>Technical lead for troubleshooting hybrid connectivity over AWS Direct Connect, OCI FastConnect and Megaport for highly available web applications and databases.</li>
-              <li>Provisioned and managed CloudFront, WAF, Lambda, Transit Gateway and Network Firewall as code through GitLab CI/CD pipelines.</li>
+              <li>Provisioned and managed CloudFront, WAF, Lambda, Transit Gateway and Network Firewall as code with Terraform and CloudFormation, through GitLab CI/CD pipelines.</li>
+              <li>Deployed and tuned more than 20 AWS WAF rules, and built AWS Firewall Manager policies to manage WAF, security groups and Network Firewall centrally.</li>
+              <li>Replaced IP allow-listing for internal applications with identity-based access: ALB authentication through Amazon Cognito federated to Okta, packaged as a reusable Terraform module.</li>
               <li>Reduced AWS costs across development, pre-production and production accounts: deployed the CUDOS cost dashboard, migrated hundreds of EBS volumes and EC2 instances, and rightsized S3 storage.</li>
-              <li>Designed migration strategies for on-premises applications using event-driven and serverless patterns, and wrote Python Lambda functions for integrations and automated workflows.</li>
             </ul>
-            <p class="stack">Terraform · CloudFormation · GitLab CI/CD · Python</p>
+            <p class="stack">Terraform · CloudFormation · GitLab CI/CD · Python and Lambda · AWS WAF · OCI</p>
           </li>
           <li>
             <h3>Amazon Web Services</h3>
-            <p class="meta"><span class="org">Technical Account Manager and Cloud Support Engineer</span></p>
+            <p class="meta"><span class="org">Technical Account Manager and Cloud Support Engineer</span> <span class="when">Jan 2020 to May 2022</span></p>
             <p class="about">As a Cloud Support Engineer I was a subject matter expert for AWS Direct Connect, working through customers' hybrid connectivity problems between their own networks and AWS. As a Technical Account Manager I was the technical point of contact for customer accounts.</p>
-            <p class="stack">Direct Connect · VPC · BGP</p>
+            <ul class="points">
+              <li>Escalation point in Premium Support for complex Direct Connect, BGP and VPN cases, including weekend production outages for enterprise customers. Promoted twice in two years.</li>
+              <li>Created IKEv2 configuration templates for the AWS Site-to-Site VPN service, and Boto3 scripts that build test environments for customer proofs of concept.</li>
+              <li>Wrote 12 internal technical articles and delivered 8 trainings on AWS networking, including an IKEv1 and IKEv2 deep dive.</li>
+              <li>As a Technical Account Manager, advised Fortune 100 customers on architecture and launch planning, and led service disruption reviews.</li>
+            </ul>
+            <p class="stack">Direct Connect · VPC · Transit Gateway · Site-to-Site and Client VPN · BGP · Route 53 · Network Firewall</p>
           </li>
           <li>
             <h3>Logicalis</h3>
-            <p class="meta"><span class="org">Enterprise and service provider networks</span></p>
+            <p class="meta"><span class="org">Network Engineer, joined as an intern</span> <span class="when">Jan 2015 to Jan 2020</span></p>
             <p class="about">Designed, deployed and migrated enterprise network infrastructure for more than ten enterprise and service provider customers, working with networking, data centre and security teams from requirements and traffic analysis through HLD and LLD to implementation.</p>
+            <ul class="points">
+              <li>Built a Python tool that generates F5 load balancer start-up configurations, used by more than 30 data centre engineers.</li>
+              <li>First intern at the company to earn the CCNP.</li>
+            </ul>
             <p class="stack">Cisco Catalyst, Nexus, ASR and ISR · F5 · Cisco UCS and Dell PowerEdge · VMware and KVM · Red Hat Linux</p>
           </li>
         </ol>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <h2 id="work-title">Selected work</h2>
+        <ul class="rows">
+          <li>
+            <h3>Direct Connect outage: BGP up, routes missing</h3>
+            <p class="meta"><span class="org">AWS Premium Support</span> <span class="when">Direct Connect escalation</span></p>
+            <p class="about">A SaaS company moved its Direct Connect to a new provider and lost reachability to its VPCs on a Friday, with a full outage due on Monday. Working up the layers on a Saturday call: optics and error counters clean, MAC learned, BGP established, yet the expected prefixes never arrived. The provider's egress router was missing the route-target import for the customer's VRF in its MPLS L3VPN. Fixed before Monday, with no user impact.</p>
+            <p class="stack">Direct Connect · BGP · MPLS L3VPN</p>
+          </li>
+          <li>
+            <h3>Active/backup Direct Connect for a payments link</h3>
+            <p class="meta"><span class="org">AWS Premium Support</span> <span class="when">Design and troubleshooting</span></p>
+            <p class="about">A payments company had to connect a partner's three data centres to its services in AWS over two hosted connections, a Direct Connect gateway and a Transit Gateway, and BGP would not come up. Layer 1 was clean, but AWS had no ARP entry for the peer; debugging with the provider traced it to a faulty switch next to the AWS router. I then helped both teams design active/backup routing with local preference and AS-path prepending.</p>
+            <p class="stack">Direct Connect · Transit Gateway · BGP policy</p>
+          </li>
+          <li>
+            <h3>Intermittent TCP resets traced to firewall DNS caching</h3>
+            <p class="meta"><span class="org">AWS Premium Support</span> <span class="when">Root cause analysis</span></p>
+            <p class="about">A large mining company saw intermittent TCP resets from its servers to AWS endpoints, two weeks before a project deadline. Packet captures showed S3 reset twelve times less often than EC2 and CloudFormation, and S3's DNS TTL was twelve times shorter. The on-premises Cisco ASA enforced FQDN-based policy and added a minute to every TTL, so its DNS cache drifted out of step with the servers'. Aligning the TTLs fixed it.</p>
+            <p class="stack">Packet analysis · DNS · Cisco ASA</p>
+          </li>
+          <li>
+            <h3>VPN-free access to an internal app</h3>
+            <p class="meta"><span class="org">Workhuman</span> <span class="when">Design and Terraform</span></p>
+            <p class="about">An internal dashboard on Fargate behind an ALB was locked to office IPs through AWS WAF, so remote staff and partners needed the VPN for every visit. I replaced IP allow-listing with identity: a Cognito user pool federated to Okta over SAML, an ALB listener using authenticate-cognito, and the service in private subnets reachable only from the ALB. It ships as a reusable Terraform module, so new environments get the same pattern by default.</p>
+            <p class="stack">ALB · Amazon Cognito · Okta SAML · Terraform</p>
+          </li>
+          <li>
+            <h3>Self-service threat blocking in DNS and BGP</h3>
+            <p class="meta"><span class="org">Dublin City University</span> <span class="when">Design and Python</span></p>
+            <p class="about">The security team needed to block malicious domains and IPs quickly, without a commercial threat intelligence platform. Two Rundeck jobs do it: one writes DNS RPZ records through the EfficientIP REST API, idempotent and logged for audit; the other injects prefixes tagged with a blackhole community, which the perimeter firewalls send to discard. Blocking a domain went from days to under an hour.</p>
+            <p class="stack">Python · Rundeck · DNS RPZ · BGP RTBH</p>
+          </li>
+        </ul>
       </section>
 
       <section class="section" id="talks" aria-labelledby="talks-title">
@@ -183,15 +227,15 @@
         <ul class="rows">
           <li>
             <h3>Postgraduate Diploma in Cyber Security</h3>
-            <p><a href="https://www.ncirl.ie/">National College of Ireland</a>, Dublin, 2024. Awarded with distinction.</p>
+            <p><a href="https://www.ncirl.ie/">National College of Ireland</a>, Dublin, 2023 to 2024. Awarded with distinction.</p>
           </li>
           <li>
             <h3>BSc Telecommunications Engineering</h3>
-            <p><a href="https://www.uff.br/">Universidade Federal Fluminense</a>, Rio de Janeiro, 2017</p>
+            <p><a href="https://www.uff.br/">Universidade Federal Fluminense</a>, Rio de Janeiro, 2010 to 2017</p>
           </li>
           <li>
             <h3>Exchange student, Electrical and Computer Engineering</h3>
-            <p><a href="https://www.nyit.edu/">New York Institute of Technology</a>, New York, 2015</p>
+            <p><a href="https://www.nyit.edu/">New York Institute of Technology</a>, New York, 2014 to 2015, on a fully funded scholarship</p>
           </li>
         </ul>
       </section>
@@ -202,6 +246,7 @@
           <li><a href="mailto:rogeriojrpalmares@outlook.com">rogeriojrpalmares@outlook.com</a>
             <button class="copy" type="button" data-copy="rogeriojrpalmares@outlook.com">Copy address</button></li>
           <li><a href="https://www.linkedin.com/in/rogeriopalmares/">LinkedIn</a></li>
+          <li><a href="https://github.com/rogeriojrpalmares">GitHub</a></li>
         </ul>
       </section>
     </main>
