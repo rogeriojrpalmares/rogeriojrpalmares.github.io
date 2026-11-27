@@ -224,7 +224,7 @@ a:hover { text-decoration-thickness: 2px; }
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 .faceplate li + li { border-left: 1px solid var(--rule); }
 
@@ -287,7 +287,6 @@ a:hover { text-decoration-thickness: 2px; }
 .faceplate.boot li:nth-child(3) .led { animation-delay: 0.65s; }
 .faceplate.boot li:nth-child(4) .led { animation-delay: 0.80s; }
 .faceplate.boot li:nth-child(5) .led { animation-delay: 0.95s; }
-.faceplate.boot li:nth-child(6) .led { animation-delay: 1.10s; }
 @keyframes boot {
   0%   { fill: var(--led-off); }
   10%  { fill: var(--led-test); }
